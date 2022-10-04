@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log in page</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+		<script>
+		function formvalidate()
+        {
+		var x=document.getElementById("user").value;
+		var pass=doucment.getElementById("pass").value;
+		if(x=="")
+		{alert("Username cann't be blank!");
+         return false;
+
+
+        }
+		 if(pass.length<6)
+		 { alert("Password should be at least six character long!");
+		 }
+         return true;
+		}
+	
+		</script>
+    </head>
+    <body>
+        <div class="loginbox">
+            <img src="Avatar.png" class="Avatar">
+            <h1>Login Here</h1>
+            <form action="#" name="myForm" >
+                <p>Username</p>
+                <input type="text" name="user" id="user" placeholder="Enter Username" onclick="return formvalidate()">
+                <p>Password</p>
+                <input type="password" name="pass " id="pass" placeholder="Enter Password" onclick="return formvalidate()">
+                <input type="submit" value="Login">
+                <a href="#">Lost your password?</a>
+                <a href="#">Don't have an account?</a>
+                </form>
+        </div>
+    </body>
+</html>
